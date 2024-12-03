@@ -9,50 +9,62 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WhatshotSharpIcon from '@mui/icons-material/WhatshotSharp';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from 'react-router-dom';
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = useState(0);
+  const navigate = useNavigate();
 
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+    if (value == 0){ navigate('/') }
+    if(value==1) {navigate('/Movies')}
+    if (value==2){navigate('/SearchPage')}
+  }
   return (
     <Box sx={{ width: '100%',position: 'fixed',bottom:0,zIndex:1000, }}>
       <BottomNavigation
         showLabels
         value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-        sx = {{ backgroundColor: '#1976d2', }}
+        onChange={handleChange}
+        sx = {{ backgroundColor: '#000', }}
       >
         <BottomNavigationAction label="Trending"
           sx={{ 
-            color:'white', 
+           '& .MuiSvgIcon-root': {
+              color: 'red', 
+              fontSize:'1.75rem' // Default icon color
+            }, 
             '& .MuiBottomNavigationAction-label': {
-            color: 'white',  
-            },
-         '&.Mui-selected': {
             color: 'white', 
-          },
+            fontSize:'1rem', 
+            },
         
         }} icon={<WhatshotSharpIcon />} />
 
         <BottomNavigationAction label="Movies" 
         sx={{ 
-            color:'white', 
+            '& .MuiSvgIcon-root': {
+              color: 'red',
+              fontSize:'1.75rem' // Default icon color
+            }, 
             '& .MuiBottomNavigationAction-label': {
           color: 'white',  
+          fontSize:'1rem',
         },
-          '&.Mui-selected': {
-            color: 'white', 
-          },
+          
          }}  icon={<LocalMoviesIcon />} />
         <BottomNavigationAction label="Search" 
           sx={{ 
-            color:'white', 
+            '& .MuiSvgIcon-root': {
+              color: 'red',
+              fontSize:'1.75rem'  // Default icon color
+            }, 
             '& .MuiBottomNavigationAction-label': {
-          color: 'white', },
-           '&.Mui-selected': {
-            color: 'white',
-          },
+          color: 'white', 
+          fontSize:'1rem',
+        },
+           
          }}    icon={<SearchIcon />} />
       </BottomNavigation>
     </Box>
