@@ -33,7 +33,7 @@ export default function SimpleBottomNavigation() {
           sx={{ 
            '& .MuiSvgIcon-root': {
               color: 'red', 
-              fontSize:'1.75rem' // Default icon color
+              fontSize:'1.85rem' // Default icon color
             }, 
             '& .MuiBottomNavigationAction-label': {
             color: 'white', 

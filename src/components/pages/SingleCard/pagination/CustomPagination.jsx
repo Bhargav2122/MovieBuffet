@@ -3,7 +3,7 @@ import Pagination from '@mui/material/Pagination';
 
 
 
-const CustomPagination = ({ setPage , totalPages = 25}) => {
+const CustomPagination = ({ setPage , totalPages = 20}) => {
    const handleChange = (page) => {
        setPage(page);
        window.scroll(0,0)
