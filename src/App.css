@@ -9,7 +9,7 @@
 .app {
     min-height: 100vh;
     background-color: #fff;
-    color: #fff;
+    color: #000;
     padding-top:60px;
 }
 .pagetitle {
@@ -36,6 +36,7 @@
     width: 300px;
     background-color: #262626;
     height: auto;
+    color: #fff;
 }
 .card-pic img {
     width: 100%;
@@ -46,6 +47,15 @@
 }
 .card-rate{
    display: flex;
+   flex-direction: column;
    justify-content: space-between;
    margin-top:10px;
+}
+.select {
+    width: 180px;
+}
+.select option {
+    width: 100%;
+    scrollbar-width: thin;
+
 }

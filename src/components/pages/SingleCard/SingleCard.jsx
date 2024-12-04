@@ -21,7 +21,9 @@ const SingleCard = ({
         <div className="card-rate">
           <p>Rating: {vote}⭐</p>
           <span>Date: {date}</span>
+          <p>type:{mediatype}</p>
         </div>
+        
       </div>
     </>
   )
