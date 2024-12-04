@@ -6,6 +6,7 @@ const Trending = () => {
  
      const API_KEY = '2232d9f6e3741c3a2aaacfea231de3e6';
      
+     
      const [cards, setCards]  = useState([])
      const [page, setPage] = useState(1)
       
