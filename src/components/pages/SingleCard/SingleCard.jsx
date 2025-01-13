@@ -1,5 +1,5 @@
 import React from 'react'
-import { img_small } from '../SingleCard/config.js'
+import { img_small, noImg } from '../SingleCard/config.js'
 const SingleCard = ({
     id,
     picture,

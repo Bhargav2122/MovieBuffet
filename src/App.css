@@ -35,7 +35,6 @@
     margin-right: .5rem;
     width: 300px;
     background-color: #262626;
-    height: auto;
     color: #fff;
 }
 .card-pic img {
@@ -59,3 +58,15 @@
     scrollbar-width: thin;
 
 }
+
+.searchContainer{
+    padding: 2% 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
